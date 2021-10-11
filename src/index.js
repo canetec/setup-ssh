@@ -4,6 +4,10 @@ const core = require("@actions/core");
 const execa = require("execa");
 
 const fileIncludesString = (file, string) => {
+  if (!fs.existsSync(file)) {
+    return false;
+  }
+
   const fileData = fs.readFileSync(file);
 
   return fileData && fileData.includes(string);
