@@ -1,0 +1,18 @@
+name: 'canetec/setup-ssh'
+description: 'Setup SSH keys and known hosts'
+inputs:
+    ssh-private-key:
+        description: 'SSH key to use during the deployment'
+        required: true
+    ssh-known-hosts:
+        description: 'SSH known hosts file'
+        required: false
+    ssh-disable-host-key-checking:
+        description: 'Turn off host key checking (insecure!)'
+        required: false
+runs:
+    using: 'node12'
+    main: 'dist/index.js'
+branding:
+    icon: server
+    color: 'yellow'

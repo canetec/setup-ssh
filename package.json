@@ -1,0 +1,29 @@
+{
+  "name": "setup-ssh",
+  "version": "1.0.0",
+  "description": "Setup SSH keys and known hosts",
+  "main": "dist/index.js",
+  "repository": "https://github.com/canetec/setup-ssh",
+  "author": "canetec",
+  "license": "MIT",
+  "engines": {
+    "node": "^12"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "eslint-config-prettier": "^7",
+    "eslint-plugin-prettier": "^4.0.0",
+    "execa": "^5.1.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.31.1",
+    "eslint": "^7",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "prettier": "^2.4.1"
+  },
+  "scripts": {
+    "build": "ncc build index.js --minify"
+  }
+}
