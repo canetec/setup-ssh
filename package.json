@@ -24,6 +24,6 @@
     "prettier": "^2.4.1"
   },
   "scripts": {
-    "build": "ncc build index.js --minify"
+    "build": "ncc build src/index.js --minify"
   }
 }
